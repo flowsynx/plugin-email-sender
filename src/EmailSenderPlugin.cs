@@ -30,7 +30,7 @@ public class EmailSenderPlugin : IPlugin
                 Copyright = "© FlowSynx. All rights reserved.",
                 Icon = "flowsynx.png",
                 ReadMe = "README.md",
-                RepositoryUrl = "https://github.com/flowsynx/plugin-email",
+                RepositoryUrl = "https://github.com/flowsynx/plugin-email-sender",
                 ProjectUrl = "https://flowsynx.io",
                 Tags = new List<string>() { "flowSynx", "email", "email-sender", "communication", "collaboration" },
                 Category = PluginCategories.Communication
