@@ -93,8 +93,8 @@ public class EmailSenderPlugin : IPlugin
 
         message.Body = builder.ToMessageBody();
 
-        var smtpHost = _emailSenderSpecifications.SmtpHost;
-        var smtpPort = _emailSenderSpecifications.SmtpPort;
+        var smtpHost = _emailSenderSpecifications.Host;
+        var smtpPort = _emailSenderSpecifications.Port;
         var useSsl = _emailSenderSpecifications.UseSsl;
         var userName = _emailSenderSpecifications.Username;
         var password = _emailSenderSpecifications.Password;
