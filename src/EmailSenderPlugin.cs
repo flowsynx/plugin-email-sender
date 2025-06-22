@@ -32,7 +32,7 @@ public class EmailSenderPlugin : IPlugin
                 ReadMe = "README.md",
                 RepositoryUrl = "https://github.com/flowsynx/plugin-email",
                 ProjectUrl = "https://flowsynx.io",
-                Tags = new List<string>() { "flowSynx", "email", "communication", "collaboration" },
+                Tags = new List<string>() { "flowSynx", "email", "email-sender", "communication", "collaboration" },
                 Category = PluginCategories.Communication
             };
         }
@@ -100,10 +100,10 @@ public class EmailSenderPlugin : IPlugin
         var password = _emailSenderSpecifications.Password;
 
         using var client = new SmtpClient();
-        await client.ConnectAsync(smtpHost, smtpPort, useSsl ? SecureSocketOptions.StartTls : SecureSocketOptions.Auto);
-        await client.AuthenticateAsync(userName, password);
-        await client.SendAsync(message);
-        await client.DisconnectAsync(true);
+        await client.ConnectAsync(smtpHost, smtpPort, useSsl ? SecureSocketOptions.StartTls : SecureSocketOptions.Auto, cancellationToken);
+        await client.AuthenticateAsync(userName, password, cancellationToken);
+        await client.SendAsync(message, cancellationToken);
+        await client.DisconnectAsync(true, cancellationToken);
 
         return Task.CompletedTask;
     }
