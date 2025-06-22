@@ -1,4 +1,4 @@
-## FlowSynx HttpRequest Plugin – FlowSynx Platform Integration
+## FlowSynx EmailSender Plugin – FlowSynx Platform Integration
 
 The Email Sender Plugin is a pre-packaged, plug-and-play integration component for the FlowSynx engine. It enables sending emails through customizable parameters such as recipients, subject, body, and attachments, and is designed for FlowSynx’s no-code/low-code automation workflows.
 
